@@ -1,0 +1,72 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-syne: 'Syne', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-jakarta);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-syne);
+  }
+
+  .input {
+    @apply border border-blue-100 rounded-xl px-3 py-2.5 text-sm text-slate-700 bg-[#FAFBFF] outline-none transition-all duration-150;
+    font-family: var(--font-jakarta);
+  }
+
+  .input:focus {
+    @apply border-blue-400 bg-white ring-2 ring-blue-100;
+  }
+
+  .input::placeholder {
+    @apply text-slate-300;
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(10, 37, 88, 0.08), 0 1px 2px rgba(10, 37, 88, 0.05);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 8px 24px rgba(10, 37, 88, 0.12);
+  }
+
+  .shadow-modal {
+    box-shadow: 0 20px 60px rgba(10, 37, 88, 0.18);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
